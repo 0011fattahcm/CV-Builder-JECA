@@ -1,23 +1,23 @@
 # CV Builder JECA
 
-**CV Builder JECA** adalah aplikasi web berbasis MERN Stack yang memungkinkan pengguna membuat, mengelola, dan mengekspor CV dalam format profesional Jepang. Aplikasi ini juga dilengkapi sistem pembayaran QRIS, kuota ekspor, dan fitur tambahan seperti gabung PDF dan konversi gambar ke PDF.
+**CV Builder JECA** is a web-based application built using the MERN Stack that allows users to create, manage, and export professional Japanese-style CVs. The app also includes a QRIS payment system, export quota management, and additional tools such as PDF merging and image-to-PDF conversion.
 
 ---
 
-## 🧱 Teknologi yang Digunakan
+## 🧱 Technologies Used
 
 - **Frontend**: React.js + Vite + Tailwind CSS  
 - **Backend**: Node.js + Express.js  
 - **Database**: MongoDB + Mongoose  
 - **Authentication**: JWT (JSON Web Token)  
-- **Pembayaran**: Xendit QRIS  
-- **Export File**: ExcelJS, LibreOffice (convert Excel ke PDF)  
+- **Payment**: Xendit QRIS  
+- **File Export**: ExcelJS, LibreOffice (convert Excel to PDF)  
 - **Realtime**: Socket.io  
 - **Email Service**: Nodemailer  
 
 ---
 
-## 📦 Library yang Digunakan
+## 📦 Libraries Used
 
 ### Frontend:
 - `axios`, `react-router-dom`, `react-toastify`, `socket.io-client`
@@ -27,77 +27,78 @@
 - `express`, `mongoose`, `jsonwebtoken`, `bcryptjs`
 - `nodemailer`, `exceljs`, `child_process`, `cors`, `uuid`
 - `xendit-node`, `socket.io`, `mime-types`, `multer`
-- `LibreOffice` CLI untuk konversi Excel ke PDF
+- `LibreOffice` CLI for Excel-to-PDF conversion
 
 ---
 
 ## 🌐 Deployment
 
-**Frontend**: Niagahoster/Hostinger
-**Backend**: Amazon Web Service EC2
-**Database**: MongoDB Atlas
+**Frontend**: Niagahoster / Hostinger  
+**Backend**: Amazon Web Services (EC2)  
+**Database**: MongoDB Atlas  
 
 ---
 
-## 🚀 Fitur Utama
+## 🚀 Main Features
 
-### 👤 Untuk Pengguna
-- Register, verifikasi email, login
-- Lupa & reset password
+### 👤 For Users
+- Register, verify email, login  
+- Forgot & reset password  
 - Edit CV (step-by-step):
-  - Data Pribadi (dengan format Jepang)
-  - Pendidikan, Pekerjaan, Keluarga, Riwayat ke Jepang
-- Upload pas foto
-- Preview CV sebelum export
+  - Personal Information (formatted in Japanese style)
+  - Education, Work Experience, Family, Japan Visit History  
+- Upload profile photo  
+- Preview CV before export  
 - Export CV:
-  - Format Excel (dengan styling khusus)
-  - Format PDF (konversi via LibreOffice)
-- Sistem kuota ekspor:
-  - +2 kuota setelah pembayaran QRIS
-  - -1 kuota tiap kali export
-- Riwayat penggunaan:
-  - Cek jumlah export, kuota tersisa, histori pembayaran,
-   login, register, merger PDF, convert PDF
+  - Excel format (with customized styling)
+  - PDF format (converted via LibreOffice)
+- Export quota system:
+  - +2 quota after successful QRIS payment  
+  - -1 quota per export  
+- Usage history:
+  - View total exports, remaining quota, payment history,  
+    login/register logs, PDF merge, image-to-PDF conversions  
 
-### 📄 Fitur Dokumen Tambahan
-- **Gabung PDF (PDF Merger)**
-  - Upload hingga 10 file PDF
-  - Bisa atur urutan sebelum digabung
-  - Output bernama otomatis: `Merger_namauser.pdf`
-- **Konversi JPG ke PDF**
-  - Upload maksimal 10 file JPG
-  - Opsi ukuran: A4 atau ukuran asli
-  - Bisa memilih untuk gabungkan semua gambar ke satu PDF atau file terpisah
-
----
-
-### 👑 Untuk Admin
-- Login via route aman `/rx78gpo1p6`
-- Dashboard admin:
-  - Statistik total user, export, pembayaran, dll
-- Manajemen data user (CRUD)
-- Daftar CV per user, langsung bisa export
-- Tabel riwayat pembayaran (50 data per halaman)
-- Tabel log aktivitas user
-- Mengirim pengumuman ke user
----
-
-## 💰 Sistem Pembayaran
-- QRIS via Xendit (integrasi API)
-- QR popup muncul jika kuota habis
-- Polling otomatis setiap 5 detik hingga status `PAID`
-- Kuota ditambahkan +2 jika sukses bayar, auto download aktif
-- Proteksi: tidak bisa export jika user tutup modal sebelum bayar
+### 📄 Additional Document Tools
+- **PDF Merger**
+  - Upload up to 10 PDF files  
+  - Reorder before merging  
+  - Automatically named output: `Merger_username.pdf`
+- **JPG to PDF Converter**
+  - Upload up to 10 JPG files  
+  - Options: A4 or original size  
+  - Option to merge all images into one PDF or keep as separate files  
 
 ---
 
-## 📌 Fitur Rencana Pengembangan
-Fitur berikut **direncanakan** untuk masa depan:
-- Pilihan template CV lain (minimalis, modern, dll)
-- Multibahasa (Indo, Jepang, Inggris)
-- Sistem paket premium & notifikasi email
+### 👑 For Admins
+- Secure login via route `/rx78gpo1p6`
+- Admin Dashboard:
+  - Statistics: total users, exports, payments, etc.  
+- User management (CRUD)
+- CV list per user with direct export feature
+- Payment history table (50 records per page)
+- User activity log table
+- Send announcements to users  
 
 ---
 
-## ✨ Kontribusi
-Project ini dikembangkan oleh tim **JECA DEVELOPER**.  
+## 💰 Payment System
+- QRIS via Xendit API integration  
+- QR popup appears automatically when export quota is 0  
+- Auto polling every 5 seconds until payment status is `PAID`  
+- +2 export quota added automatically after successful payment  
+- Protection: export blocked if the user closes the payment modal before completing payment  
+
+---
+
+## 📌 Planned Features
+The following features are **planned for future updates**:
+- Additional CV templates (minimalist, modern, etc.)  
+- Multi-language support (Indonesian, Japanese, English)  
+- Premium package system & email notifications  
+
+---
+
+## ✨ Contribution
+This project is developed by the **JECA DEVELOPER** team.  
