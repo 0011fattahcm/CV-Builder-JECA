@@ -99,6 +99,3 @@ The following features are **planned for future updates**:
 - Premium package system & email notifications  
 
 ---
-
-## ✨ Contribution
-This project is developed by the **JECA DEVELOPER** team.  
